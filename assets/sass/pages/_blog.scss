@@ -1,0 +1,31 @@
+.blog {
+	padding-top: 140px;
+	padding-bottom: 100px;
+
+	&__sort {
+		@include flex(flex-end, center);
+		margin-bottom: 42px;
+
+		button {
+			@include flex(center, center);
+			background: none;
+			color: $secondary-100;
+
+			&::after {
+				display: none;
+			}
+
+			svg {
+				margin-right: 10px;
+			}
+		}
+	}
+	@include for-size(tablet-portrait-down) {
+		padding-top: 40px;
+		padding-bottom: 40px;
+
+		&__sort {
+			margin-bottom: 10px;
+		}
+	}
+}

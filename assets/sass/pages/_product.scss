@@ -1,0 +1,527 @@
+/// startour product
+
+.ourproduct {
+    background-image: linear-gradient(to right, $primary-100, $primary-200);
+    height: 400px;
+    .container {
+        display: flex;
+        justify-content: space-between;
+        //padding-top: 20px ;
+        .text-hero1 {
+            padding-top: 90px;
+            h1 {
+                color: $white;
+                font-family: $primary-bold;
+                font-weight: bold;
+                letter-spacing: normal;
+                line-height: 60px;
+            }
+            p {
+                color: $white;
+                font-family: $primary-SemiBold;
+                line-height: 1.63;
+                letter-spacing: normal;
+                width: 440px;
+            }
+        }
+        img {
+            width: 100%;
+            height: 443px;
+        }
+    }
+}
+
+///start  media ourpricing
+@include for-size(tablet-landscape-down) {
+    .ourproduct {
+        h1 {
+            font-size: 23px;
+            line-height: 40px;
+            margin-top: 30px;
+        }
+        .container .text-hero1 p {
+            width: 340px;
+        }
+    }
+}
+
+@media screen and (max-width: 764px) {
+    .ourproduct {
+        h1 {
+            font-size: 16px;
+            line-height: 20px;
+        }
+        .container .text-hero1 p {
+            width: 240px;
+        }
+    }
+}
+@include for-size(phone-only) {
+    .ourproduct {
+        height: 470px;
+        .container {
+            display: block;
+            text-align: center;
+            .text-hero1 {
+                padding-top: 20px;
+                h1 {
+                    font-size: 16px;
+                    line-height: 40px;
+                    margin-top: 0px;
+                }
+                p {
+                    width: auto;
+                }
+            }
+            img {
+                height: 303px;
+            }
+        }
+    }
+}
+//// end media ourpricing
+
+/// end our product
+
+// start crad reader
+.all-button {
+    @extend .button;
+}
+.cardreader {
+    margin-top: 90px;
+    .inside_cardreader {
+        //display: flex;
+        .maskgroup {
+            max-width: 100%;
+        }
+        .text-card {
+            h2 {
+                line-height: 36px;
+            }
+            p {
+                margin-top: 20px;
+            }
+            .easytoget,
+            .workeveryway {
+                display: flex;
+                p {
+                    margin-left: 60px;
+                    margin-top: 15px;
+                    color: $primary-100;
+                }
+            }
+            button {
+                border: solid 1px $primary-100;
+                background-color: $primary-100;
+                color: $white;
+                @extend .all-button;
+            }
+            button:hover {
+                color: $primary-100;
+                border: solid 1px $primary-100;
+                background-color: $white;
+                svg {
+                    path {
+                        fill: $primary-100;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.cardraeder2 {
+    margin-top: 1px;
+}
+//// media card reader
+@include for-size(tablet-landscape-down) {
+    .cardreader {
+        margin-top: 1px;
+    }
+    .cardreader .inside_cardreader .text-card .easytoget p,
+    .cardreader .inside_cardreader .text-card .workeveryway p {
+        margin-left: 30px;
+        margin-top: 12px;
+        font-size: 14px;
+    }
+    .cardreader .inside_cardreader .text-card h2 {
+        font-size: 22px;
+    }
+    .inside_cardreader {
+        p {
+            font-size: 17px;
+            margin-top: 1px;
+        }
+    }
+}
+@media screen and (max-width: 760px) {
+    .cardreader {
+        text-align: center;
+        .changeorder {
+            order: 1;
+        }
+        .inside_cardreader {
+            p {
+                margin-top: 10px;
+            }
+            .maskgroup {
+                margin-top: 20px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .cardreader .inside_cardreader .text-card p {
+        font-size: 10px;
+    }
+    .cardreader .inside_cardreader .maskgroup {
+        padding-top: 20px;
+    }
+    .cardreader .inside_cardreader .text-card button {
+        width: 120px;
+        height: 32px;
+        font-size: 13px;
+    }
+    .cardraeder-singproduct .inside_cardreader .text-card .easytoget p,
+    .cardreader .inside_cardreader .text-card .workeveryway p {
+        text-align: left;
+    }
+}
+/// end media card reader
+
+/// end card reader
+
+// start integration
+
+.integrations {
+    .text-integration {
+        text-align: center;
+        margin-top: 60px;
+        h6 {
+            color: #000000;
+        }
+        h5 {
+            font-family: $primary-regular;
+            font-size: 16px;
+            font-weight: normal;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: normal;
+            color: #e57a7a;
+        }
+    }
+}
+.all-card {
+    .card-part {
+        display: flex;
+        justify-content: space-between;
+        margin: 40px 50px;
+        .card {
+            background: $white;
+            box-shadow: 0px 3px 55px rgba(66, 65, 65, 0.15);
+            border-radius: 5px;
+            width: 320px;
+            height: 637px;
+            img {
+                margin-top: 10px;
+                width: 90px;
+                height: 90px;
+            }
+            h5 {
+                line-height: 2.44;
+            }
+            .last-card-icon {
+                width: 100px;
+                height: 101px;
+            }
+            .contonu {
+                padding-top: 14px;
+            }
+            p {
+                font-size: 15px;
+                font-weight: normal;
+                font-stretch: normal;
+                font-style: normal;
+                line-height: 1.6;
+                letter-spacing: normal;
+                color: #000000;
+            }
+            .pic-titre {
+                text-align: center;
+            }
+            a {
+                color: $primary-100;
+                img {
+                    width: 15px;
+                    height: 15px;
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    }
+}
+.last-text-integration {
+    text-align: center;
+    p {
+        margin: 0 auto;
+        max-width: 676px;
+        font-size: 16px;
+        font-weight: bold;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.5;
+        letter-spacing: normal;
+        color: #000000;
+    }
+    button {
+        color: $primary-100;
+        border: solid 1px $primary-100;
+        background-color: $white;
+        @extend .all-button;
+    }
+    button:hover {
+        color: $white;
+        border: solid 1px $primary-100;
+        background-color: $primary-100;
+        svg {
+            path {
+                fill: $white;
+            }
+        }
+    }
+}
+
+/// start media integration
+@include for-size(desktop-down) {
+    .all-card .card-part .card p {
+        font-size: 12px;
+    }
+    .all-card .card-part .card {
+        height: 507px;
+    }
+    .all-card .card-part {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        margin: 40px -28px;
+    }
+}
+@include for-size(tablet-landscape-down) {
+    .all-card .card-part .card {
+        height: 643px;
+    }
+}
+@include for-size(tablet-landscape-down) {
+    .all-card {
+        .card-part {
+            text-align: center;
+            display: block;
+            .card {
+                display: inline-block;
+                width: 320px;
+                margin: 5px 0px;
+                height: 484px;
+            }
+        }
+    }
+}
+@include for-size(phone-only) {
+    .integrations .text-integration {
+        text-align: center;
+        margin-top: 2px;
+    }
+    .all-card .card-part .card p {
+        font-size: 14px;
+    }
+    .all-card {
+        .card-part {
+            .card {
+                max-width: 290px;
+                margin: 5px 0px;
+                height: 587px;
+            }
+        }
+    }
+}
+
+/// end media integrastion
+
+// end integration
+
+// start jok&taks
+
+.jobtaks-background {
+    background: linear-gradient(90deg, #fdeee5 0%, rgba(253, 238, 229, 0) 100%);
+    margin-top: 50px;
+}
+
+.jobtaks {
+    .inside_jobtaks {
+        .jobtaksimg {
+            max-width: 100%;
+            height: auto;
+        }
+        .text-joktaks {
+            margin-top: 30px;
+            h5 {
+                font-family: $primary-regular;
+                font-size: 16px;
+                font-weight: normal;
+                font-stretch: normal;
+                font-style: normal;
+                line-height: normal;
+                color: $primary-100;
+            }
+            p {
+                margin-top: 15px;
+                //max-width: 440px;
+                font-weight: normal;
+                font-stretch: normal;
+                font-style: normal;
+                line-height: 1.63;
+                letter-spacing: normal;
+                color: #424141;
+            }
+        }
+        h6 {
+            color: $primary-100;
+            margin-left: 30px;
+        }
+        i {
+            color: $primary-100;
+        }
+        .options {
+            margin-top: 15px;
+            display: flex;
+            .circle {
+                border: 3px solid $white;
+                background-color: $primary-100;
+                color: $white;
+                font-size: 18px;
+                font-weight: lighter;
+                width: 44px;
+                height: 44px;
+                text-align: center;
+                align-items: center;
+                padding: 10px;
+                border-radius: 50%;
+                box-shadow: 0 3px 5px 0 rgba(66, 65, 65, 0.15);
+            }
+            h6 {
+                margin-top: 6px;
+            }
+        }
+        button {
+            border: solid 1px $primary-100;
+            background-color: $primary-100;
+            color: $white;
+            @extend .all-button;
+            margin-top: 30px;
+        }
+        button:hover {
+            color: $primary-100;
+            border: solid 1px $primary-100;
+            background-color: $white;
+            svg {
+                path {
+                    fill: $primary-100;
+                }
+            }
+        }
+    }
+}
+.jobtaks-background2 {
+    background: linear-gradient(270deg, #fdeee5 0%, rgba(253, 238, 229, 0) 100%);
+    .jobtaks .inside_jobtaks .text-joktaks {
+        margin-top: 120px;
+    }
+}
+
+/// start media joktaks
+@include for-size(tablet-landscape-down) {
+    .row {
+        align-items: center;
+    }
+    .jobtaks {
+        .jobtaksimg {
+            height: auto;
+            margin-top: 80px;
+        }
+        .text-joktaks {
+            p {
+                font-size: 17px;
+                line-height: 5px;
+            }
+        }
+    }
+}
+@include for-size(tablet-portrait-down) {
+    .jobtaks-background2 {
+        .jobtaks .inside_jobtaks .text-joktaks {
+            margin-top: 1px;
+        }
+        .jobtaks .jobtaksimg {
+            margin-top: 40px;
+        }
+    }
+    .jobtaks .inside_jobtaks h6 {
+        margin-left: auto;
+    }
+    .jobtaks {
+        .jobtaksimg {
+            height: auto;
+            margin-top: 0px;
+        }
+        .text-joktaks {
+            text-align: center;
+            p {
+                width: auto;
+            }
+            .options {
+                text-align: center;
+                width: auto;
+            }
+        }
+    }
+}
+@include for-size(phone-only) {
+    .jobtaks .inside_jobtaks .options {
+        display: contents;
+    }
+    .jobtaks-background .jobtaks .row div:first-child {
+        text-align: -moz-center;
+    }
+    .jobtaks-background {
+        margin-top: 31px;
+    }
+    .jobtaks .inside_jobtaks .jobtaksimg {
+        height: auto;
+    }
+    .jobtaks .inside_jobtaks button {
+        margin-bottom: 20px;
+    }
+    .jobtaks .inside_jobtaks .text-joktaks {
+        margin-top: -21px;
+    }
+
+    .jobtaks .text-joktaks .options {
+        margin-top: 28px;
+    }
+
+    .jobtaks-background {
+        .jobtaks {
+            .row {
+                div:first-child {
+                    order: 1;
+                }
+            }
+        }
+    }
+}
+
+/// end media jok taks
+/// end jok&taks

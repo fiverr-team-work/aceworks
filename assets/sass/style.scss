@@ -1,0 +1,34 @@
+// 1 - Utils
+@import "utils/variables";
+@import "utils/mixins";
+
+// 2 - Vendors;
+@import "vendors/bootstrap";
+
+// 3 - Base;
+@import "base/reset";
+@import "base/typography";
+
+// 4 - Layout;
+@import "layout/navbar";
+@import "layout/footer";
+
+// 5 - Components;
+@import "components/buttons";
+@import "components/inputs";
+@import "components/post-card";
+@import "components/pagination";
+@import "components/pricing-cards";
+@import "components/menu-icon";
+@import "components/header-page";
+
+// 5 - Pages;
+@import "pages/home";
+@import "pages/about-us";
+@import "pages/contact";
+@import "pages/careers";
+@import "pages/blog";
+@import "pages/single-blog";
+@import "pages/single-product";
+@import "pages/product";
+@import "pages/pricing";

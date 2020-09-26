@@ -1,0 +1,28 @@
+.pagination {
+	margin-top: 50px;
+
+	.page-item {
+		a {
+			border: 0;
+			color: $secondary-100;
+			opacity: 0.45;
+
+			&:hover {
+				opacity: 1;
+			}
+		}
+		&.current a {
+			opacity: 1;
+		}
+		&.disabled {
+			cursor: not-allowed;
+			&:hover {
+				opacity: 0.45;
+			}
+		}
+	}
+
+	@include for-size(phone-only) {
+		margin-top: 10px;
+	}
+}

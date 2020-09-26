@@ -1,0 +1,159 @@
+.our-story {
+	h4.semi {
+		margin-bottom: 20px;
+	}
+	img {
+		max-width: 100%;
+	}
+	p.reg {
+		margin-bottom: 15px;
+	}
+
+	.row > div {
+		padding-top: 20px;
+		padding-bottom: 20px;
+	}
+	svg {
+		position: absolute;
+		top: -60px;
+		right: 10%;
+	}
+	@include for-size(phone-only) {
+		text-align: center;
+		svg {
+			top: -20px;
+			width: 35px;
+		}
+	}
+}
+
+.why-us {
+	svg {
+		position: absolute;
+		left: 65%;
+		top: 3%;
+	}
+	h4.semi {
+		text-align: center;
+		margin-bottom: 40px;
+	}
+	.paragraph {
+		display: flex;
+		img {
+			align-self: flex-start;
+			margin-top: 5px;
+		}
+		p {
+			margin-bottom: 25px;
+			margin-left: 15px;
+		}
+	}
+}
+
+.our-team {
+	h4.semi {
+		margin-bottom: 40px;
+		text-align: center;
+	}
+
+	.card__member {
+		border: 0.5px solid rgba(229, 122, 122, 0.55);
+		border-radius: $border-radius-1;
+		padding: 30px 25px;
+		text-align: center;
+		max-width: 470px;
+		margin: 0 auto;
+
+		&__avatar {
+			margin-bottom: 25px;
+			background-color: $white;
+			box-shadow: 0px 3px 25px rgba(66, 65, 65, 0.15);
+			padding: 10px;
+			max-width: 270px;
+			max-height: 270px;
+			margin: 0 auto 25px;
+			border-radius: 50%;
+			img {
+				width: 100%;
+			}
+		}
+
+		&__header {
+			margin-bottom: 25px;
+			h4 {
+				margin-bottom: 8px;
+			}
+			p {
+				opacity: 0.55;
+			}
+		}
+
+		&__bio {
+			margin-bottom: 21px;
+		}
+
+		&__social {
+			a {
+				border: 0.5px solid $primary-100;
+				display: inline-flex;
+				align-items: center;
+				justify-content: center;
+				border-radius: 50%;
+				width: 36px;
+				height: 36px;
+
+				&:hover {
+					border-color: $primary-100;
+					svg {
+						path {
+							fill: $primary-100;
+						}
+					}
+				}
+			}
+		}
+
+		@include for-size(tablet-portrait-down) {
+			margin: 20px auto;
+			padding: 20px 15px;
+
+			&__avatar {
+				max-width: 150px;
+				max-height: 150px;
+				margin-left: auto;
+				margin-right: auto;
+				margin-bottom: 20px;
+			}
+		}
+	}
+}
+
+.location {
+	background-image: url("../img/backgrounds/map.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+	padding-top: 55px;
+	padding-bottom: 277px;
+	text-align: center;
+
+	&__info {
+		box-shadow: 0px 3px 35px rgba(0, 0, 0, 0.15);
+		border-radius: $border-radius-1;
+		padding: 35px 36px 35px 30px;
+		display: inline-block;
+		background-color: $white;
+		text-align: left;
+
+		h4 {
+			margin-bottom: 25px;
+		}
+		p {
+			margin-bottom: 0;
+		}
+	}
+
+	@include for-size(tablet-portrait-down) {
+		padding-top: 35px;
+		padding-bottom: 35px;
+	}
+}

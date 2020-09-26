@@ -1,0 +1,126 @@
+@import "../components/menu-icon";
+
+nav.navbar {
+	padding-top: 30px;
+	padding-bottom: 30px;
+	background: linear-gradient(90deg, #e57a7a 8.19%, #efa29b 114.43%);
+
+	&.navbar-light {
+		background: $white;
+
+		.nav-content {
+			.nav-item {
+				.nav-link {
+					color: $secondary-100;
+
+					&:hover,
+					&.active {
+						&::after {
+							background: $secondary-100;
+						}
+					}
+				}
+			}
+		}
+		.menu-icon-wrapper svg path {
+			stroke: $secondary-100;
+		}
+	}
+
+	.nav-content {
+		margin-bottom: 0;
+		margin-left: auto;
+		@include flex(space-between, center);
+
+		.nav-item {
+			.nav-link {
+				color: $white;
+				padding: 15px 22px;
+				position: relative;
+
+				&:hover,
+				&.active {
+					font-family: $primary-SemiBold;
+					&::after {
+						content: "";
+						position: absolute;
+						bottom: 5px;
+						left: 50%;
+						transform: translateX(-50%);
+						width: 20px;
+						height: 2px;
+						background: $white;
+					}
+				}
+			}
+		}
+	}
+
+	@include for-size(tablet-portrait-down) {
+		padding-top: 20px;
+		padding-bottom: 20px;
+		.brand {
+			img {
+				width: 140px;
+			}
+		}
+		.nav-content {
+			background: linear-gradient(90deg, #e57a7a 8.19%, #efa29b 114.43%);
+			position: fixed;
+			top: 0;
+			left: -900px;
+			right: 0;
+			bottom: 0;
+			width: 100%;
+			flex-direction: column;
+			justify-content: center;
+			transition: left 400ms ease-in;
+			z-index: 9;
+			margin: 0;
+
+			.nav-item {
+				margin-bottom: 20px;
+			}
+
+			&.is-active {
+				left: 0;
+				transition: left 400ms ease-out;
+			}
+		}
+		&.navbar-light {
+			.nav-content {
+				background-image: none;
+				background-color: $white;
+
+				.nav-item {
+					.nav-link {
+						color: $secondary-100;
+
+						&:hover,
+						&.active {
+							&::after {
+								background: $secondary-100;
+							}
+						}
+					}
+				}
+			}
+			.menu-icon-wrapper svg path {
+				stroke: $secondary-100;
+			}
+		}
+		.menu-icon-wrapper {
+			display: block !important;
+		}
+	}
+
+	@include for-size(phone-only) {
+		padding-top: 10px;
+		padding-bottom: 10px;
+		.brand {
+			img {
+				width: 120px;
+			}
+		}
+	}
+}

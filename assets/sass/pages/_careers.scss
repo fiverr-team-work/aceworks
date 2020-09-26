@@ -1,0 +1,133 @@
+.about-careers {
+	padding-top: 100px;
+	padding-bottom: 100px;
+	background-image: url("../img/illustrations/background_3dots.svg");
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center left;
+
+	a {
+		color: $primary-100;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+	img {
+		max-width: 100%;
+	}
+	@include for-size(tablet-portrait-down) {
+		padding-top: 50px;
+		padding-bottom: 50px;
+		background-position: top;
+	}
+}
+
+.review {
+	padding-top: 44px;
+	padding-bottom: 44px;
+	margin-bottom: 150px;
+	background: linear-gradient(90deg, #fdeee5 0%, rgba(253, 238, 229, 0) 50%);
+
+	&__avatar .photo {
+		margin-bottom: 25px;
+		background-color: $white;
+		box-shadow: 0px 3px 25px rgba(66, 65, 65, 0.15);
+		padding: 7.41px;
+		max-width: 185px;
+		max-height: 185px;
+		margin: 0 auto 25px;
+		border-radius: 50%;
+
+		img {
+			width: 100%;
+		}
+	}
+
+	&__info {
+		img {
+			margin-bottom: 15px;
+		}
+		p {
+			color: $secondary-100;
+			font-family: $primary-italic;
+			font-size: $size-regular;
+
+			margin-bottom: 20px;
+		}
+		h5 {
+			color: $secondary-100;
+			font-size: $size-x-small;
+		}
+		p.small {
+			font-size: $size-xx-small;
+			color: $secondary-100;
+			opacity: 0.55;
+		}
+	}
+
+	@include for-size(tablet-portrait-down) {
+		text-align: center;
+		margin-bottom: 0;
+	}
+}
+
+.benefits {
+	background-image: url("../img/illustrations/benefits_bg.svg");
+	background-repeat: no-repeat;
+	background-position: center;
+
+	&__img,
+	&__info {
+		padding-bottom: 150px;
+		padding-top: 150px;
+	}
+
+	&__info {
+		&__title {
+			margin-bottom: 25px;
+		}
+
+		&__list {
+			li {
+				margin-bottom: 15px;
+				padding-left: 29px;
+				position: relative;
+				line-height: 26px;
+
+				b {
+					@extend h6.semi;
+				}
+
+				&::before {
+					content: "";
+					width: 24px;
+					height: 24px;
+					background-image: url("../img/icons/bi_check.svg");
+					background-repeat: no-repeat;
+					background-position: top center;
+					position: absolute;
+					left: 0;
+					top: 0;
+				}
+			}
+		}
+
+		.button {
+			text-align: center;
+			padding: 12px 45px;
+		}
+	}
+
+	@include for-size(tablet-portrait-down) {
+		&,
+		&__img,
+		&__info {
+			padding-bottom: 40px;
+			padding-top: 40px;
+		}
+
+		.button {
+			display: block;
+		}
+	}
+}

@@ -1,0 +1,234 @@
+.footer {
+	background: url("../img/backgrounds/footer_bg.svg") no-repeat bottom center;
+	background-size: cover;
+	position: relative;
+	background-position: 60%;
+	margin-top: 100px;
+
+	.container {
+		z-index: 1;
+		position: relative;
+	}
+
+	&__subscribe {
+		.signup-cta {
+			padding-bottom: 100px;
+			h2 {
+				color: $primary-100;
+				margin-bottom: 25px;
+			}
+			p {
+				margin-bottom: 30px;
+			}
+		}
+		& > div:last-child {
+			align-self: flex-end;
+		}
+		.signup-form {
+			max-width: 750px;
+			margin: 0 auto;
+			h3 {
+				margin-bottom: 36px;
+				text-align: center;
+				color: $white;
+			}
+			form {
+				position: relative;
+				input {
+					margin: 0;
+					width: 100%;
+					border-radius: 50px;
+					box-shadow: 0px 3px 35px rgba(66, 65, 65, 0.1);
+					padding: 16px 20px;
+					border: none;
+				}
+				button {
+					position: absolute;
+					right: 0;
+					top: 50%;
+					transform: translateY(-50%);
+					@include flex(center, center);
+					cursor: pointer;
+					background: none;
+					padding: 21px 36px 21px 16px;
+					border-radius: 0px 25px 25px 0px;
+
+					&:hover {
+						svg path {
+							fill: $secondary-100;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	&__prefooter {
+		padding-bottom: 90px;
+		padding-top: 73px;
+
+		p,
+		a {
+			color: $white;
+			font-size: $size-xx-small;
+			line-height: 24px;
+		}
+
+		a {
+			&:hover {
+				color: $white;
+				text-decoration: underline;
+			}
+		}
+
+		.rights {
+			img {
+				margin-bottom: 30px;
+			}
+
+			.icons {
+				@include flex(space-between, center);
+				max-width: 190px;
+				margin-bottom: 15px;
+
+				a {
+					min-width: 36px;
+					max-width: 36px;
+					min-height: 36px;
+					max-height: 36px;
+					border: 1px solid $white;
+					border-radius: 50%;
+					display: inline-flex;
+					justify-content: center;
+					align-items: center;
+
+					&:hover {
+						background-color: $white;
+						svg path {
+							fill: $primary-100;
+						}
+					}
+				}
+			}
+		}
+
+		& > div:not(:first-child) {
+			h6 {
+				color: $white;
+				margin-bottom: 30px;
+				position: relative;
+				&::after {
+					content: "";
+					width: 50px;
+					height: 2px;
+					background-color: $white;
+					border-radius: 50px;
+					position: absolute;
+					bottom: -5px;
+					left: 0;
+				}
+			}
+			a {
+				margin-bottom: 10px;
+				font-family: $primary-medium;
+				display: block;
+			}
+		}
+	}
+
+	.bg_bottom {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+	}
+
+	@include for-size(desktop-up) {
+		background: linear-gradient(180deg, #e57a7a 27%, #efa29b 100%);
+		&__subscribe {
+			padding-top: 50px;
+			padding-bottom: 50px;
+			& > div:last-child {
+				align-self: flex-start;
+			}
+		}
+		.signup-cta {
+			padding: 0;
+			h2,
+			p {
+				color: $white;
+			}
+			.button {
+				background-color: $white;
+				color: $primary-100;
+				border: 2px solid $primary-100;
+
+				&:hover {
+					background-color: $primary-100;
+					border-color: $white;
+					color: $white;
+				}
+			}
+		}
+	}
+
+	@include for-size(tablet-landscape-down) {
+		background: linear-gradient(180deg, #e57a7a 27%, #efa29b 100%);
+
+		&__subscribe {
+			padding-bottom: 50px;
+
+			.signup-cta {
+				padding-top: 50px;
+				padding-bottom: 50px;
+				text-align: center;
+
+				h2,
+				p {
+					color: $white;
+				}
+				.button {
+					background-color: $white;
+					color: $primary-100;
+					border: 2px solid $primary-100;
+
+					&:hover {
+						background-color: $primary-100;
+						border-color: $white;
+						color: $white;
+					}
+				}
+			}
+		}
+
+		&__prefooter {
+			padding-bottom: 34px;
+			padding-top: 0;
+			.rights {
+				img {
+					margin-bottom: 15px;
+				}
+			}
+
+			& > div {
+				margin-top: 10px;
+				margin-bottom: 10px;
+			}
+		}
+	}
+
+	@include for-size(phone-only) {
+		text-align: center;
+		h6,
+		.icons {
+			display: inline-block;
+			margin-left: auto;
+			margin-right: auto;
+
+			&::after {
+				left: 50% !important;
+				transform: translateX(-50%);
+			}
+		}
+	}
+}

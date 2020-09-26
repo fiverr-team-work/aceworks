@@ -1,0 +1,30 @@
+.header-page {
+	background-image: linear-gradient(to right, $primary-100, $primary-200);
+	min-height: 400px;
+	@include flex(space-between, center);
+
+	h1,
+	p {
+		color: $white;
+	}
+
+	.to-down {
+		position: relative;
+		top: 30px;
+	}
+
+	.to-top {
+		position: relative;
+		bottom: 30px;
+	}
+
+	@include for-size(tablet-landscape-down) {
+		text-align: center;
+
+		.to-down,
+		.to-top {
+			position: static;
+			padding-bottom: 40px;
+		}
+	}
+}

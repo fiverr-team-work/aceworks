@@ -1,0 +1,66 @@
+.blog__post {
+	border: 0.5px solid rgba(66, 65, 65, 0.35);
+	border-radius: $border-radius-1;
+	overflow: hidden;
+	width: 330px;
+	margin: 15px;
+	display: inline-block;
+	text-align: left;
+
+	&__img {
+		img {
+			width: 100%;
+		}
+	}
+	&__body {
+		padding: 15px 20px 23px;
+
+		&__credit {
+			@include flex(space-between, center);
+			margin-bottom: 20px;
+			color: #8c8c8c;
+			font-size: $size-xx-small;
+			div {
+				@include flex(space-between, center);
+			}
+		}
+
+		&__text {
+			h4 {
+				color: $secondary-100;
+				margin-bottom: 5px;
+
+				&:hover {
+					color: $primary-100;
+				}
+			}
+			p {
+				opacity: 0.65;
+			}
+		}
+	}
+
+	&__action {
+		.button {
+			border-radius: $border-radius-1;
+			padding: 10px 16px;
+
+			svg {
+				margin-left: 5px;
+			}
+
+			&:hover {
+				svg {
+					path {
+						fill: $white;
+					}
+				}
+			}
+		}
+	}
+
+	@include for-size(phone-only) {
+		width: auto;
+		margin: 15px 0;
+	}
+}

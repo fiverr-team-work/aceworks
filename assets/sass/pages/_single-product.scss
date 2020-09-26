@@ -1,0 +1,327 @@
+//// start cardraeder-singproduct
+.cardraeder-singproduct {
+	.button-price {
+		display: flex;
+		.price-product {
+			p {
+				margin-left: 60px;
+				margin-top: 25px;
+			}
+			i {
+				color: $primary-100;
+			}
+		}
+	}
+}
+
+//// start media cardraeder-singproduct
+@include for-size(tablet-landscape-down) {
+	.cardraeder-singproduct {
+		.button-price {
+			.price-product {
+				p {
+					margin-left: 20px;
+				}
+			}
+		}
+	}
+}
+
+@include for-size(tablet-portrait-down) {
+	.cardraeder-singproduct .inside_cardreader .text-card .easytoget p,
+	.cardreader .inside_cardreader .text-card .workeveryway p {
+		margin-left: 30px;
+		margin-top: 12px;
+		font-size: 13px;
+	}
+	.cardraeder-singproduct {
+		.inside_cardreader .maskgroup {
+			margin-top: auto;
+		}
+		.button-price {
+			display: block;
+			.price-product {
+				p {
+					margin-left: auto;
+				}
+			}
+		}
+	}
+}
+
+@include for-size(phone-only) {
+	.cardreader .inside_cardreader .text-card p {
+		font-size: 17px;
+	}
+}
+//// endmedia cardraeder-singproduct
+//// end cardraeder-singproduct
+
+.all-mini-para {
+	font-weight: 300;
+	font-size: 20px;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: 1.4;
+	letter-spacing: normal;
+	color: $secondary-100;
+	font-family: $primary-regular;
+}
+//// start calcule section 2
+
+.calculesection2 {
+	background-image: url(../img/backgrounds/background5.svg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	.part2-hero3 {
+		.text2-hero3 {
+			margin-top: 70px;
+			h3 {
+				font-size: 32px;
+			}
+
+			.mini-para {
+				@extend .all-mini-para;
+			}
+		}
+	}
+
+	img {
+		width: 100%;
+		height: 420px;
+	}
+	.part2-hero3 .button-price button {
+		background: #e57a7a;
+		color: #ffffff;
+		width: 200px;
+		height: 45px;
+		margin-top: auto;
+	}
+}
+//// start media calcule section 2
+
+@include for-size(desktop-down) {
+	.calculesection .part2-hero3 .text2-hero3 {
+		margin-top: 40px;
+	}
+}
+@include for-size(tablet-landscape-down) {
+	.calculesection .part2-hero3 img {
+		height: 480px;
+		margin-top: 20px;
+	}
+	.calculesection .part2-hero3 .text2-hero3 {
+		margin-top: auto;
+	}
+}
+@include for-size(tablet-portrait-down) {
+	.calculesection .part2-hero3 .text2-hero3 .mini-para {
+		font-size: 16px;
+	}
+	.calculesection .part2-hero3 .text2-hero3 h3 {
+		font-size: 20px;
+	}
+	.calculesection .part2-hero3 img {
+		height: 380px;
+	}
+	.part2-hero3 .button-price button {
+		width: 160px;
+		height: 25px;
+	}
+	.calculesection .part2-hero3 .button-price button {
+		width: 150px;
+		height: 35px;
+		font-size: 12px;
+	}
+}
+@include for-size(phone-only) {
+	.calculesection .part2-hero3 {
+		margin-top: -63px;
+	}
+}
+//// end media calcule section 2
+//// end calcule section 2
+
+/// start first lorem section1
+.loremsection1 {
+	margin-top: 60px;
+	.text-lorem {
+		text-align: center;
+		.mini-para,
+		h3 {
+			margin: 0 auto;
+			text-align: center;
+		}
+		.mini-para {
+			@extend .all-mini-para;
+			width: 770px;
+		}
+		h3 {
+			max-width: 625px;
+			font-size: 32px;
+		}
+	}
+	.lorem-options {
+		margin-top: 20px;
+		.option {
+			text-align: center;
+			img {
+				width: 142px;
+			}
+			.mini-para {
+				@extend .all-mini-para;
+				font-size: 16px;
+				color: $black;
+				line-height: 1.75;
+			}
+		}
+	}
+}
+/// start media first lorem section1
+
+@include for-size(tablet-landscape-down) {
+	.loremsection1 {
+		.text-lorem {
+			text-align: center;
+			.mini-para {
+				width: auto;
+			}
+			h3 {
+				max-width: auto;
+			}
+		}
+	}
+}
+@include for-size(tablet-portrait-down) {
+	.loremsection1 {
+		.text-lorem {
+			.mini-para {
+				font-size: 16px;
+			}
+			h3 {
+				font-size: 20px;
+			}
+		}
+	}
+}
+@include for-size(phone-only) {
+	.loremsection1 {
+		margin-top: -14px;
+	}
+	.calculesection2 {
+		height: 681px;
+	}
+}
+@media screen and (max-width: 331px) {
+	.calculesection2 {
+		height: 730px;
+	}
+}
+/// end media first lorem section1
+
+/// end first lorem section1
+
+/// start second lorem
+
+.second-lorem {
+	background: none;
+	.jobtaks .inside_jobtaks h6 {
+		margin-left: 0px;
+	}
+	.jobtaks .inside_jobtaks .options .circle {
+		width: 44px;
+		height: 44px;
+	}
+	.mini-para {
+		@extend .all-mini-para;
+		font-size: 16px;
+		max-width: 474px;
+	}
+	.text-option {
+		margin-left: 30px;
+	}
+}
+/// start media second lorem
+
+@include for-size(tdesktop-down) {
+	.second-lorem {
+		.inside_jobtaks {
+			img {
+				max-width: 100%;
+				height: auto;
+				margin-top: 34px;
+			}
+		}
+	}
+	.jobtaks .inside_jobtaks .options .circle {
+		width: 54px;
+		height: 44px;
+	}
+}
+@include for-size(tablet-landscape-down) {
+	//margin-top: 19px;
+	.jobtaks .inside_jobtaks .options {
+		display: contents;
+	}
+	.jobtaks .inside_jobtaks .text-joktaks {
+		margin-top: 30px;
+		text-align: center;
+	}
+	.second-lorem .jobtaks .inside_jobtaks h6 {
+		font-size: 12px;
+	}
+
+	.second-lorem .mini-para {
+		font-size: 13px;
+	}
+	.second-lorem h2 {
+		font-size: 18px;
+	}
+	.jobtaks .inside_jobtaks .jobtaksimg {
+		margin-top: auto;
+	}
+}
+
+@include for-size(tablet-portrait-down) {
+	.second-lorem .jobtaks .inside_jobtaks h6 {
+		font-size: 14px;
+	}
+
+	.second-lorem .mini-para {
+		font-size: 15px;
+	}
+	.second-lorem .jobtaks .inside_jobtaks .options .circle {
+		width: 44px;
+		height: 44px;
+	}
+}
+@include for-size(phone-only) {
+	.jobtaks .inside_jobtaks .jobtaksimg {
+		margin-top: 21px;
+	}
+	a, a:visited {
+		margin-top: 19px;
+	}
+	.jobtaks .inside_jobtaks .options {
+		display: contents;
+	}
+	.jobtaks .inside_jobtaks .text-joktaks {
+		margin-top: -26px;
+	}
+	.second-lorem .text-option {
+		margin-left: auto;
+	}
+	.second-lorem .jobtaks .inside_jobtaks h6 {
+		font-size: 14px;
+	}
+
+	.second-lorem .mini-para {
+		font-size: 15px;
+	}
+	.second-lorem .jobtaks .inside_jobtaks .options .circle {
+		max-width: 54px;
+		height: 44px;
+	}
+}
+//// end media second lorem
+//// end second lorem
