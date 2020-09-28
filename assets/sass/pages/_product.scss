@@ -195,6 +195,7 @@
 // start integration
 
 .integrations {
+    padding-top: 30px;
     .text-integration {
         text-align: center;
         margin-top: 60px;
@@ -334,15 +335,20 @@
         text-align: center;
         margin-top: 2px;
     }
-    .all-card .card-part .card p {
-        font-size: 14px;
+    .all-card .card-part {
+        width: 100%;
+        margin: 0;
+        .card p {
+            font-size: 14px;
+        }
     }
     .all-card {
         .card-part {
             .card {
                 max-width: 290px;
                 margin: 5px 0px;
-                height: 587px;
+                height: auto;
+                padding-bottom: 20px;
             }
         }
     }
@@ -517,6 +523,7 @@
             .row {
                 div:first-child {
                     order: 1;
+                    margin: 30px auto 10px;
                 }
             }
         }

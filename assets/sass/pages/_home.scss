@@ -259,6 +259,10 @@
 			}
 		}
 	}
+
+	@include for-size(phone-only) {
+		margin-bottom: 0px;
+	}
 }
 
 .pricing {
